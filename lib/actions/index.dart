@@ -8,6 +8,9 @@ part 'index.freezed.dart';
 part 'get_images.dart';
 part 'search_images.dart';
 part 'change_query.dart';
+part 'initialize_app.dart';
+part 'register.dart';
+part 'sign_out.dart';
 
 abstract class AppAction {}
 
@@ -15,3 +18,5 @@ abstract class ErrorAction implements AppAction {
   Object get error;
   StackTrace get stackTrace;
 }
+
+typedef ActionResult = void Function(AppAction action);

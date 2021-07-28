@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "460190958111",
+    "project_id": "flutter-splashot",
+    "storage_bucket": "flutter-splashot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460190958111:android:3f02652355123b67ea0b2a",
+        "android_client_info": {
+          "package_name": "com.example.flutter_splashot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460190958111-rlrlvhsr8pkmq44m51koqpjrhbmgjunn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK0pa1zsD0w8Zu4NqzrWmdQCdQpOgBFaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460190958111-rlrlvhsr8pkmq44m51koqpjrhbmgjunn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

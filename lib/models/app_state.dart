@@ -6,6 +6,10 @@ abstract class AppState implements Built<AppState, AppStateBuilder> {
 
   AppState._();
 
+  AppUser? get user;
+
+  bool get isLoading;
+
   String get query;
 
   int get page;

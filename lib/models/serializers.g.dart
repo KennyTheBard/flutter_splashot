@@ -8,6 +8,7 @@ part of 'serializers.dart';
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(AppState.serializer)
+      ..add(AppUser.serializer)
       ..add(UnsplashImage.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(UnsplashImage)]), () => new ListBuilder<UnsplashImage>()))
