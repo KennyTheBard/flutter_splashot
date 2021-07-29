@@ -11,6 +11,7 @@ part 'change_query.dart';
 part 'initialize_app.dart';
 part 'register.dart';
 part 'sign_out.dart';
+part 'upload_photo.dart';
 
 abstract class AppAction {}
 

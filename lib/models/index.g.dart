@@ -7,7 +7,8 @@ part of models;
 // **************************************************************************
 
 Serializer<AppState> _$appStateSerializer = new _$AppStateSerializer();
-Serializer<UnsplashImage> _$unsplashImageSerializer = new _$UnsplashImageSerializer();
+Serializer<UnsplashImage> _$unsplashImageSerializer =
+    new _$UnsplashImageSerializer();
 Serializer<AppUser> _$appUserSerializer = new _$AppUserSerializer();
 
 class _$AppStateSerializer implements StructuredSerializer<AppState> {
@@ -21,21 +22,28 @@ class _$AppStateSerializer implements StructuredSerializer<AppState> {
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[
       'isLoading',
-      serializers.serialize(object.isLoading, specifiedType: const FullType(bool)),
+      serializers.serialize(object.isLoading,
+          specifiedType: const FullType(bool)),
       'query',
-      serializers.serialize(object.query, specifiedType: const FullType(String)),
+      serializers.serialize(object.query,
+          specifiedType: const FullType(String)),
       'page',
       serializers.serialize(object.page, specifiedType: const FullType(int)),
       'pageSize',
-      serializers.serialize(object.pageSize, specifiedType: const FullType(int)),
+      serializers.serialize(object.pageSize,
+          specifiedType: const FullType(int)),
       'images',
       serializers.serialize(object.images,
-          specifiedType: const FullType(BuiltList, const [const FullType(UnsplashImage)])),
+          specifiedType:
+              const FullType(BuiltList, const [const FullType(UnsplashImage)])),
     ];
     Object? value;
     value = object.user;
     if (value != null) {
-      result..add('user')..add(serializers.serialize(value, specifiedType: const FullType(AppUser)));
+      result
+        ..add('user')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(AppUser)));
     }
     return result;
   }
@@ -52,23 +60,30 @@ class _$AppStateSerializer implements StructuredSerializer<AppState> {
       final Object? value = iterator.current;
       switch (key) {
         case 'user':
-          result.user.replace(serializers.deserialize(value, specifiedType: const FullType(AppUser))! as AppUser);
+          result.user.replace(serializers.deserialize(value,
+              specifiedType: const FullType(AppUser))! as AppUser);
           break;
         case 'isLoading':
-          result.isLoading = serializers.deserialize(value, specifiedType: const FullType(bool)) as bool;
+          result.isLoading = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
           break;
         case 'query':
-          result.query = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.query = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'page':
-          result.page = serializers.deserialize(value, specifiedType: const FullType(int)) as int;
+          result.page = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'pageSize':
-          result.pageSize = serializers.deserialize(value, specifiedType: const FullType(int)) as int;
+          result.pageSize = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'images':
           result.images.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [const FullType(UnsplashImage)]))! as BuiltList<Object?>);
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(UnsplashImage)]))!
+              as BuiltList<Object?>);
           break;
       }
     }
@@ -92,7 +107,8 @@ class _$UnsplashImageSerializer implements StructuredSerializer<UnsplashImage> {
       'likes',
       serializers.serialize(object.likes, specifiedType: const FullType(int)),
       'author',
-      serializers.serialize(object.author, specifiedType: const FullType(String)),
+      serializers.serialize(object.author,
+          specifiedType: const FullType(String)),
       'url',
       serializers.serialize(object.url, specifiedType: const FullType(String)),
     ];
@@ -101,7 +117,8 @@ class _$UnsplashImageSerializer implements StructuredSerializer<UnsplashImage> {
   }
 
   @override
-  UnsplashImage deserialize(Serializers serializers, Iterable<Object?> serialized,
+  UnsplashImage deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new UnsplashImageBuilder();
 
@@ -112,16 +129,20 @@ class _$UnsplashImageSerializer implements StructuredSerializer<UnsplashImage> {
       final Object? value = iterator.current;
       switch (key) {
         case 'id':
-          result.id = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'likes':
-          result.likes = serializers.deserialize(value, specifiedType: const FullType(int)) as int;
+          result.likes = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'author':
-          result.author = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.author = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'url':
-          result.url = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.url = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -143,11 +164,20 @@ class _$AppUserSerializer implements StructuredSerializer<AppUser> {
       'uid',
       serializers.serialize(object.uid, specifiedType: const FullType(String)),
       'username',
-      serializers.serialize(object.username, specifiedType: const FullType(String)),
+      serializers.serialize(object.username,
+          specifiedType: const FullType(String)),
       'email',
-      serializers.serialize(object.email, specifiedType: const FullType(String)),
+      serializers.serialize(object.email,
+          specifiedType: const FullType(String)),
     ];
-
+    Object? value;
+    value = object.photoUrl;
+    if (value != null) {
+      result
+        ..add('photoUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -163,13 +193,20 @@ class _$AppUserSerializer implements StructuredSerializer<AppUser> {
       final Object? value = iterator.current;
       switch (key) {
         case 'uid':
-          result.uid = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.uid = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'username':
-          result.username = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.username = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'email':
-          result.email = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.email = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'photoUrl':
+          result.photoUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -192,7 +229,8 @@ class _$AppState extends AppState {
   @override
   final BuiltList<UnsplashImage> images;
 
-  factory _$AppState([void Function(AppStateBuilder)? updates]) => (new AppStateBuilder()..update(updates)).build();
+  factory _$AppState([void Function(AppStateBuilder)? updates]) =>
+      (new AppStateBuilder()..update(updates)).build();
 
   _$AppState._(
       {this.user,
@@ -210,7 +248,8 @@ class _$AppState extends AppState {
   }
 
   @override
-  AppState rebuild(void Function(AppStateBuilder) updates) => (toBuilder()..update(updates)).build();
+  AppState rebuild(void Function(AppStateBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
 
   @override
   AppStateBuilder toBuilder() => new AppStateBuilder()..replace(this);
@@ -230,7 +269,12 @@ class _$AppState extends AppState {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc($jc($jc(0, user.hashCode), isLoading.hashCode), query.hashCode), page.hashCode), pageSize.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, user.hashCode), isLoading.hashCode),
+                    query.hashCode),
+                page.hashCode),
+            pageSize.hashCode),
         images.hashCode));
   }
 
@@ -271,7 +315,8 @@ class AppStateBuilder implements Builder<AppState, AppStateBuilder> {
   set pageSize(int? pageSize) => _$this._pageSize = pageSize;
 
   ListBuilder<UnsplashImage>? _images;
-  ListBuilder<UnsplashImage> get images => _$this._images ??= new ListBuilder<UnsplashImage>();
+  ListBuilder<UnsplashImage> get images =>
+      _$this._images ??= new ListBuilder<UnsplashImage>();
   set images(ListBuilder<UnsplashImage>? images) => _$this._images = images;
 
   AppStateBuilder();
@@ -308,10 +353,14 @@ class AppStateBuilder implements Builder<AppState, AppStateBuilder> {
       _$result = _$v ??
           new _$AppState._(
               user: _user?.build(),
-              isLoading: BuiltValueNullFieldError.checkNotNull(isLoading, 'AppState', 'isLoading'),
-              query: BuiltValueNullFieldError.checkNotNull(query, 'AppState', 'query'),
-              page: BuiltValueNullFieldError.checkNotNull(page, 'AppState', 'page'),
-              pageSize: BuiltValueNullFieldError.checkNotNull(pageSize, 'AppState', 'pageSize'),
+              isLoading: BuiltValueNullFieldError.checkNotNull(
+                  isLoading, 'AppState', 'isLoading'),
+              query: BuiltValueNullFieldError.checkNotNull(
+                  query, 'AppState', 'query'),
+              page: BuiltValueNullFieldError.checkNotNull(
+                  page, 'AppState', 'page'),
+              pageSize: BuiltValueNullFieldError.checkNotNull(
+                  pageSize, 'AppState', 'pageSize'),
               images: images.build());
     } catch (_) {
       late String _$failedField;
@@ -322,7 +371,8 @@ class AppStateBuilder implements Builder<AppState, AppStateBuilder> {
         _$failedField = 'images';
         images.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError('AppState', _$failedField, e.toString());
+        throw new BuiltValueNestedFieldError(
+            'AppState', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -344,7 +394,12 @@ class _$UnsplashImage extends UnsplashImage {
   factory _$UnsplashImage([void Function(UnsplashImageBuilder)? updates]) =>
       (new UnsplashImageBuilder()..update(updates)).build();
 
-  _$UnsplashImage._({required this.id, required this.likes, required this.author, required this.url}) : super._() {
+  _$UnsplashImage._(
+      {required this.id,
+      required this.likes,
+      required this.author,
+      required this.url})
+      : super._() {
     BuiltValueNullFieldError.checkNotNull(id, 'UnsplashImage', 'id');
     BuiltValueNullFieldError.checkNotNull(likes, 'UnsplashImage', 'likes');
     BuiltValueNullFieldError.checkNotNull(author, 'UnsplashImage', 'author');
@@ -352,7 +407,8 @@ class _$UnsplashImage extends UnsplashImage {
   }
 
   @override
-  UnsplashImage rebuild(void Function(UnsplashImageBuilder) updates) => (toBuilder()..update(updates)).build();
+  UnsplashImage rebuild(void Function(UnsplashImageBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
 
   @override
   UnsplashImageBuilder toBuilder() => new UnsplashImageBuilder()..replace(this);
@@ -369,7 +425,9 @@ class _$UnsplashImage extends UnsplashImage {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc($jc(0, id.hashCode), likes.hashCode), author.hashCode), url.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, id.hashCode), likes.hashCode), author.hashCode),
+        url.hashCode));
   }
 
   @override
@@ -383,7 +441,8 @@ class _$UnsplashImage extends UnsplashImage {
   }
 }
 
-class UnsplashImageBuilder implements Builder<UnsplashImage, UnsplashImageBuilder> {
+class UnsplashImageBuilder
+    implements Builder<UnsplashImage, UnsplashImageBuilder> {
   _$UnsplashImage? _$v;
 
   String? _id;
@@ -431,10 +490,14 @@ class UnsplashImageBuilder implements Builder<UnsplashImage, UnsplashImageBuilde
   _$UnsplashImage build() {
     final _$result = _$v ??
         new _$UnsplashImage._(
-            id: BuiltValueNullFieldError.checkNotNull(id, 'UnsplashImage', 'id'),
-            likes: BuiltValueNullFieldError.checkNotNull(likes, 'UnsplashImage', 'likes'),
-            author: BuiltValueNullFieldError.checkNotNull(author, 'UnsplashImage', 'author'),
-            url: BuiltValueNullFieldError.checkNotNull(url, 'UnsplashImage', 'url'));
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, 'UnsplashImage', 'id'),
+            likes: BuiltValueNullFieldError.checkNotNull(
+                likes, 'UnsplashImage', 'likes'),
+            author: BuiltValueNullFieldError.checkNotNull(
+                author, 'UnsplashImage', 'author'),
+            url: BuiltValueNullFieldError.checkNotNull(
+                url, 'UnsplashImage', 'url'));
     replace(_$result);
     return _$result;
   }
@@ -447,17 +510,26 @@ class _$AppUser extends AppUser {
   final String username;
   @override
   final String email;
+  @override
+  final String? photoUrl;
 
-  factory _$AppUser([void Function(AppUserBuilder)? updates]) => (new AppUserBuilder()..update(updates)).build();
+  factory _$AppUser([void Function(AppUserBuilder)? updates]) =>
+      (new AppUserBuilder()..update(updates)).build();
 
-  _$AppUser._({required this.uid, required this.username, required this.email}) : super._() {
+  _$AppUser._(
+      {required this.uid,
+      required this.username,
+      required this.email,
+      this.photoUrl})
+      : super._() {
     BuiltValueNullFieldError.checkNotNull(uid, 'AppUser', 'uid');
     BuiltValueNullFieldError.checkNotNull(username, 'AppUser', 'username');
     BuiltValueNullFieldError.checkNotNull(email, 'AppUser', 'email');
   }
 
   @override
-  AppUser rebuild(void Function(AppUserBuilder) updates) => (toBuilder()..update(updates)).build();
+  AppUser rebuild(void Function(AppUserBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
 
   @override
   AppUserBuilder toBuilder() => new AppUserBuilder()..replace(this);
@@ -465,17 +537,27 @@ class _$AppUser extends AppUser {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is AppUser && uid == other.uid && username == other.username && email == other.email;
+    return other is AppUser &&
+        uid == other.uid &&
+        username == other.username &&
+        email == other.email &&
+        photoUrl == other.photoUrl;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, uid.hashCode), username.hashCode), email.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, uid.hashCode), username.hashCode), email.hashCode),
+        photoUrl.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('AppUser')..add('uid', uid)..add('username', username)..add('email', email))
+    return (newBuiltValueToStringHelper('AppUser')
+          ..add('uid', uid)
+          ..add('username', username)
+          ..add('email', email)
+          ..add('photoUrl', photoUrl))
         .toString();
   }
 }
@@ -495,6 +577,10 @@ class AppUserBuilder implements Builder<AppUser, AppUserBuilder> {
   String? get email => _$this._email;
   set email(String? email) => _$this._email = email;
 
+  String? _photoUrl;
+  String? get photoUrl => _$this._photoUrl;
+  set photoUrl(String? photoUrl) => _$this._photoUrl = photoUrl;
+
   AppUserBuilder();
 
   AppUserBuilder get _$this {
@@ -503,6 +589,7 @@ class AppUserBuilder implements Builder<AppUser, AppUserBuilder> {
       _uid = $v.uid;
       _username = $v.username;
       _email = $v.email;
+      _photoUrl = $v.photoUrl;
       _$v = null;
     }
     return this;
@@ -524,8 +611,11 @@ class AppUserBuilder implements Builder<AppUser, AppUserBuilder> {
     final _$result = _$v ??
         new _$AppUser._(
             uid: BuiltValueNullFieldError.checkNotNull(uid, 'AppUser', 'uid'),
-            username: BuiltValueNullFieldError.checkNotNull(username, 'AppUser', 'username'),
-            email: BuiltValueNullFieldError.checkNotNull(email, 'AppUser', 'email'));
+            username: BuiltValueNullFieldError.checkNotNull(
+                username, 'AppUser', 'username'),
+            email: BuiltValueNullFieldError.checkNotNull(
+                email, 'AppUser', 'email'),
+            photoUrl: photoUrl);
     replace(_$result);
     return _$result;
   }

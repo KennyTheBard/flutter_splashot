@@ -105,7 +105,14 @@ class _HomePageState extends State<HomePage> {
                               StoreProvider.of<AppState>(context).dispatch(const SignOut());
                             },
                             icon: const Icon(Icons.logout),
-                          )
+                          ),
+                        if (user != null)
+                          IconButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/profile');
+                            },
+                            icon: const Icon(Icons.person_outline),
+                          ),
                       ],
                     );
                   }),

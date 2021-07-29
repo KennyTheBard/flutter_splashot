@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_splashot/models/index.dart';
@@ -41,7 +43,8 @@ class AuthApi {
       b
         ..uid = result.user!.uid
         ..username = email.split('@').first
-        ..email = email;
+        ..email = email
+        ..photoUrl = result.user!.photoURL;
     });
 
     await _firestore //
@@ -54,4 +57,18 @@ class AuthApi {
   Future<void> signOut() async {
     await _auth.signOut();
   }
+
+  // Future<AppUser> uploadPhoto(AppUser user, String filePath) async {
+  //   final File file = File(filePath);
+  //
+  //   await _firestore //
+  //       .doc('users/${user.uid}/profile.jpg')
+  //       .put(<String, Object>{file});
+  //
+  //   await _firestore //
+  //       .ref('users/${user.uid}/profile.jpg')
+  //   .get();
+  //
+  //   return user;
+  // }
 }

@@ -73,7 +73,8 @@ mixin _$GetImages {
 
 /// @nodoc
 abstract class $GetImagesCopyWith<$Res> {
-  factory $GetImagesCopyWith(GetImages value, $Res Function(GetImages) then) = _$GetImagesCopyWithImpl<$Res>;
+  factory $GetImagesCopyWith(GetImages value, $Res Function(GetImages) then) =
+      _$GetImagesCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -87,14 +88,16 @@ class _$GetImagesCopyWithImpl<$Res> implements $GetImagesCopyWith<$Res> {
 
 /// @nodoc
 abstract class $GetImagesStartCopyWith<$Res> {
-  factory $GetImagesStartCopyWith(GetImagesStart value, $Res Function(GetImagesStart) then) =
+  factory $GetImagesStartCopyWith(
+          GetImagesStart value, $Res Function(GetImagesStart) then) =
       _$GetImagesStartCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class _$GetImagesStartCopyWithImpl<$Res> extends _$GetImagesCopyWithImpl<$Res>
     implements $GetImagesStartCopyWith<$Res> {
-  _$GetImagesStartCopyWithImpl(GetImagesStart _value, $Res Function(GetImagesStart) _then)
+  _$GetImagesStartCopyWithImpl(
+      GetImagesStart _value, $Res Function(GetImagesStart) _then)
       : super(_value, (v) => _then(v as GetImagesStart));
 
   @override
@@ -174,15 +177,18 @@ abstract class GetImagesStart implements GetImages {
 
 /// @nodoc
 abstract class $GetImagesSuccessfulCopyWith<$Res> {
-  factory $GetImagesSuccessfulCopyWith(GetImagesSuccessful value, $Res Function(GetImagesSuccessful) then) =
+  factory $GetImagesSuccessfulCopyWith(
+          GetImagesSuccessful value, $Res Function(GetImagesSuccessful) then) =
       _$GetImagesSuccessfulCopyWithImpl<$Res>;
   $Res call({BuiltList<UnsplashImage> images});
 }
 
 /// @nodoc
-class _$GetImagesSuccessfulCopyWithImpl<$Res> extends _$GetImagesCopyWithImpl<$Res>
+class _$GetImagesSuccessfulCopyWithImpl<$Res>
+    extends _$GetImagesCopyWithImpl<$Res>
     implements $GetImagesSuccessfulCopyWith<$Res> {
-  _$GetImagesSuccessfulCopyWithImpl(GetImagesSuccessful _value, $Res Function(GetImagesSuccessful) _then)
+  _$GetImagesSuccessfulCopyWithImpl(
+      GetImagesSuccessful _value, $Res Function(GetImagesSuccessful) _then)
       : super(_value, (v) => _then(v as GetImagesSuccessful));
 
   @override
@@ -218,11 +224,13 @@ class _$GetImagesSuccessful implements GetImagesSuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is GetImagesSuccessful &&
-            (identical(other.images, images) || const DeepCollectionEquality().equals(other.images, images)));
+            (identical(other.images, images) ||
+                const DeepCollectionEquality().equals(other.images, images)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(images);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(images);
 
   @JsonKey(ignore: true)
   @override
@@ -279,16 +287,19 @@ class _$GetImagesSuccessful implements GetImagesSuccessful {
 }
 
 abstract class GetImagesSuccessful implements GetImages {
-  const factory GetImagesSuccessful(BuiltList<UnsplashImage> images) = _$GetImagesSuccessful;
+  const factory GetImagesSuccessful(BuiltList<UnsplashImage> images) =
+      _$GetImagesSuccessful;
 
   BuiltList<UnsplashImage> get images => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetImagesSuccessfulCopyWith<GetImagesSuccessful> get copyWith => throw _privateConstructorUsedError;
+  $GetImagesSuccessfulCopyWith<GetImagesSuccessful> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetImagesErrorCopyWith<$Res> {
-  factory $GetImagesErrorCopyWith(GetImagesError value, $Res Function(GetImagesError) then) =
+  factory $GetImagesErrorCopyWith(
+          GetImagesError value, $Res Function(GetImagesError) then) =
       _$GetImagesErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
@@ -296,7 +307,8 @@ abstract class $GetImagesErrorCopyWith<$Res> {
 /// @nodoc
 class _$GetImagesErrorCopyWithImpl<$Res> extends _$GetImagesCopyWithImpl<$Res>
     implements $GetImagesErrorCopyWith<$Res> {
-  _$GetImagesErrorCopyWithImpl(GetImagesError _value, $Res Function(GetImagesError) _then)
+  _$GetImagesErrorCopyWithImpl(
+      GetImagesError _value, $Res Function(GetImagesError) _then)
       : super(_value, (v) => _then(v as GetImagesError));
 
   @override
@@ -340,9 +352,11 @@ class _$GetImagesError implements GetImagesError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is GetImagesError &&
-            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)) &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality().equals(other.stackTrace, stackTrace)));
+                const DeepCollectionEquality()
+                    .equals(other.stackTrace, stackTrace)));
   }
 
   @override
@@ -406,12 +420,14 @@ class _$GetImagesError implements GetImagesError {
 }
 
 abstract class GetImagesError implements GetImages, ErrorAction {
-  const factory GetImagesError(Object error, StackTrace stackTrace) = _$GetImagesError;
+  const factory GetImagesError(Object error, StackTrace stackTrace) =
+      _$GetImagesError;
 
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetImagesErrorCopyWith<GetImagesError> get copyWith => throw _privateConstructorUsedError;
+  $GetImagesErrorCopyWith<GetImagesError> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -475,7 +491,8 @@ mixin _$SearchImages {
 
 /// @nodoc
 abstract class $SearchImagesCopyWith<$Res> {
-  factory $SearchImagesCopyWith(SearchImages value, $Res Function(SearchImages) then) =
+  factory $SearchImagesCopyWith(
+          SearchImages value, $Res Function(SearchImages) then) =
       _$SearchImagesCopyWithImpl<$Res>;
 }
 
@@ -490,14 +507,17 @@ class _$SearchImagesCopyWithImpl<$Res> implements $SearchImagesCopyWith<$Res> {
 
 /// @nodoc
 abstract class $SearchImagesStartCopyWith<$Res> {
-  factory $SearchImagesStartCopyWith(SearchImagesStart value, $Res Function(SearchImagesStart) then) =
+  factory $SearchImagesStartCopyWith(
+          SearchImagesStart value, $Res Function(SearchImagesStart) then) =
       _$SearchImagesStartCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SearchImagesStartCopyWithImpl<$Res> extends _$SearchImagesCopyWithImpl<$Res>
+class _$SearchImagesStartCopyWithImpl<$Res>
+    extends _$SearchImagesCopyWithImpl<$Res>
     implements $SearchImagesStartCopyWith<$Res> {
-  _$SearchImagesStartCopyWithImpl(SearchImagesStart _value, $Res Function(SearchImagesStart) _then)
+  _$SearchImagesStartCopyWithImpl(
+      SearchImagesStart _value, $Res Function(SearchImagesStart) _then)
       : super(_value, (v) => _then(v as SearchImagesStart));
 
   @override
@@ -577,15 +597,18 @@ abstract class SearchImagesStart implements SearchImages {
 
 /// @nodoc
 abstract class $SearchImagesSuccessfulCopyWith<$Res> {
-  factory $SearchImagesSuccessfulCopyWith(SearchImagesSuccessful value, $Res Function(SearchImagesSuccessful) then) =
+  factory $SearchImagesSuccessfulCopyWith(SearchImagesSuccessful value,
+          $Res Function(SearchImagesSuccessful) then) =
       _$SearchImagesSuccessfulCopyWithImpl<$Res>;
   $Res call({BuiltList<UnsplashImage> images});
 }
 
 /// @nodoc
-class _$SearchImagesSuccessfulCopyWithImpl<$Res> extends _$SearchImagesCopyWithImpl<$Res>
+class _$SearchImagesSuccessfulCopyWithImpl<$Res>
+    extends _$SearchImagesCopyWithImpl<$Res>
     implements $SearchImagesSuccessfulCopyWith<$Res> {
-  _$SearchImagesSuccessfulCopyWithImpl(SearchImagesSuccessful _value, $Res Function(SearchImagesSuccessful) _then)
+  _$SearchImagesSuccessfulCopyWithImpl(SearchImagesSuccessful _value,
+      $Res Function(SearchImagesSuccessful) _then)
       : super(_value, (v) => _then(v as SearchImagesSuccessful));
 
   @override
@@ -621,16 +644,19 @@ class _$SearchImagesSuccessful implements SearchImagesSuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is SearchImagesSuccessful &&
-            (identical(other.images, images) || const DeepCollectionEquality().equals(other.images, images)));
+            (identical(other.images, images) ||
+                const DeepCollectionEquality().equals(other.images, images)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(images);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(images);
 
   @JsonKey(ignore: true)
   @override
   $SearchImagesSuccessfulCopyWith<SearchImagesSuccessful> get copyWith =>
-      _$SearchImagesSuccessfulCopyWithImpl<SearchImagesSuccessful>(this, _$identity);
+      _$SearchImagesSuccessfulCopyWithImpl<SearchImagesSuccessful>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -682,24 +708,29 @@ class _$SearchImagesSuccessful implements SearchImagesSuccessful {
 }
 
 abstract class SearchImagesSuccessful implements SearchImages {
-  const factory SearchImagesSuccessful(BuiltList<UnsplashImage> images) = _$SearchImagesSuccessful;
+  const factory SearchImagesSuccessful(BuiltList<UnsplashImage> images) =
+      _$SearchImagesSuccessful;
 
   BuiltList<UnsplashImage> get images => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SearchImagesSuccessfulCopyWith<SearchImagesSuccessful> get copyWith => throw _privateConstructorUsedError;
+  $SearchImagesSuccessfulCopyWith<SearchImagesSuccessful> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SearchImagesErrorCopyWith<$Res> {
-  factory $SearchImagesErrorCopyWith(SearchImagesError value, $Res Function(SearchImagesError) then) =
+  factory $SearchImagesErrorCopyWith(
+          SearchImagesError value, $Res Function(SearchImagesError) then) =
       _$SearchImagesErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$SearchImagesErrorCopyWithImpl<$Res> extends _$SearchImagesCopyWithImpl<$Res>
+class _$SearchImagesErrorCopyWithImpl<$Res>
+    extends _$SearchImagesCopyWithImpl<$Res>
     implements $SearchImagesErrorCopyWith<$Res> {
-  _$SearchImagesErrorCopyWithImpl(SearchImagesError _value, $Res Function(SearchImagesError) _then)
+  _$SearchImagesErrorCopyWithImpl(
+      SearchImagesError _value, $Res Function(SearchImagesError) _then)
       : super(_value, (v) => _then(v as SearchImagesError));
 
   @override
@@ -743,9 +774,11 @@ class _$SearchImagesError implements SearchImagesError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is SearchImagesError &&
-            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)) &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality().equals(other.stackTrace, stackTrace)));
+                const DeepCollectionEquality()
+                    .equals(other.stackTrace, stackTrace)));
   }
 
   @override
@@ -809,12 +842,14 @@ class _$SearchImagesError implements SearchImagesError {
 }
 
 abstract class SearchImagesError implements SearchImages, ErrorAction {
-  const factory SearchImagesError(Object error, StackTrace stackTrace) = _$SearchImagesError;
+  const factory SearchImagesError(Object error, StackTrace stackTrace) =
+      _$SearchImagesError;
 
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SearchImagesErrorCopyWith<SearchImagesError> get copyWith => throw _privateConstructorUsedError;
+  $SearchImagesErrorCopyWith<SearchImagesError> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -880,7 +915,9 @@ mixin _$ChangeQuery {
 
 /// @nodoc
 abstract class $ChangeQueryCopyWith<$Res> {
-  factory $ChangeQueryCopyWith(ChangeQuery value, $Res Function(ChangeQuery) then) = _$ChangeQueryCopyWithImpl<$Res>;
+  factory $ChangeQueryCopyWith(
+          ChangeQuery value, $Res Function(ChangeQuery) then) =
+      _$ChangeQueryCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -894,15 +931,18 @@ class _$ChangeQueryCopyWithImpl<$Res> implements $ChangeQueryCopyWith<$Res> {
 
 /// @nodoc
 abstract class $ChangeQueryStartCopyWith<$Res> {
-  factory $ChangeQueryStartCopyWith(ChangeQueryStart value, $Res Function(ChangeQueryStart) then) =
+  factory $ChangeQueryStartCopyWith(
+          ChangeQueryStart value, $Res Function(ChangeQueryStart) then) =
       _$ChangeQueryStartCopyWithImpl<$Res>;
   $Res call({String query});
 }
 
 /// @nodoc
-class _$ChangeQueryStartCopyWithImpl<$Res> extends _$ChangeQueryCopyWithImpl<$Res>
+class _$ChangeQueryStartCopyWithImpl<$Res>
+    extends _$ChangeQueryCopyWithImpl<$Res>
     implements $ChangeQueryStartCopyWith<$Res> {
-  _$ChangeQueryStartCopyWithImpl(ChangeQueryStart _value, $Res Function(ChangeQueryStart) _then)
+  _$ChangeQueryStartCopyWithImpl(
+      ChangeQueryStart _value, $Res Function(ChangeQueryStart) _then)
       : super(_value, (v) => _then(v as ChangeQueryStart));
 
   @override
@@ -938,11 +978,13 @@ class _$ChangeQueryStart implements ChangeQueryStart {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is ChangeQueryStart &&
-            (identical(other.query, query) || const DeepCollectionEquality().equals(other.query, query)));
+            (identical(other.query, query) ||
+                const DeepCollectionEquality().equals(other.query, query)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(query);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(query);
 
   @JsonKey(ignore: true)
   @override
@@ -1003,20 +1045,24 @@ abstract class ChangeQueryStart implements ChangeQuery {
 
   String get query => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ChangeQueryStartCopyWith<ChangeQueryStart> get copyWith => throw _privateConstructorUsedError;
+  $ChangeQueryStartCopyWith<ChangeQueryStart> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ChangeQuerySuccessfulCopyWith<$Res> {
-  factory $ChangeQuerySuccessfulCopyWith(ChangeQuerySuccessful value, $Res Function(ChangeQuerySuccessful) then) =
+  factory $ChangeQuerySuccessfulCopyWith(ChangeQuerySuccessful value,
+          $Res Function(ChangeQuerySuccessful) then) =
       _$ChangeQuerySuccessfulCopyWithImpl<$Res>;
   $Res call({String query});
 }
 
 /// @nodoc
-class _$ChangeQuerySuccessfulCopyWithImpl<$Res> extends _$ChangeQueryCopyWithImpl<$Res>
+class _$ChangeQuerySuccessfulCopyWithImpl<$Res>
+    extends _$ChangeQueryCopyWithImpl<$Res>
     implements $ChangeQuerySuccessfulCopyWith<$Res> {
-  _$ChangeQuerySuccessfulCopyWithImpl(ChangeQuerySuccessful _value, $Res Function(ChangeQuerySuccessful) _then)
+  _$ChangeQuerySuccessfulCopyWithImpl(
+      ChangeQuerySuccessful _value, $Res Function(ChangeQuerySuccessful) _then)
       : super(_value, (v) => _then(v as ChangeQuerySuccessful));
 
   @override
@@ -1052,16 +1098,19 @@ class _$ChangeQuerySuccessful implements ChangeQuerySuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is ChangeQuerySuccessful &&
-            (identical(other.query, query) || const DeepCollectionEquality().equals(other.query, query)));
+            (identical(other.query, query) ||
+                const DeepCollectionEquality().equals(other.query, query)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(query);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(query);
 
   @JsonKey(ignore: true)
   @override
   $ChangeQuerySuccessfulCopyWith<ChangeQuerySuccessful> get copyWith =>
-      _$ChangeQuerySuccessfulCopyWithImpl<ChangeQuerySuccessful>(this, _$identity);
+      _$ChangeQuerySuccessfulCopyWithImpl<ChangeQuerySuccessful>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1117,20 +1166,24 @@ abstract class ChangeQuerySuccessful implements ChangeQuery {
 
   String get query => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ChangeQuerySuccessfulCopyWith<ChangeQuerySuccessful> get copyWith => throw _privateConstructorUsedError;
+  $ChangeQuerySuccessfulCopyWith<ChangeQuerySuccessful> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ChangeQueryErrorCopyWith<$Res> {
-  factory $ChangeQueryErrorCopyWith(ChangeQueryError value, $Res Function(ChangeQueryError) then) =
+  factory $ChangeQueryErrorCopyWith(
+          ChangeQueryError value, $Res Function(ChangeQueryError) then) =
       _$ChangeQueryErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$ChangeQueryErrorCopyWithImpl<$Res> extends _$ChangeQueryCopyWithImpl<$Res>
+class _$ChangeQueryErrorCopyWithImpl<$Res>
+    extends _$ChangeQueryCopyWithImpl<$Res>
     implements $ChangeQueryErrorCopyWith<$Res> {
-  _$ChangeQueryErrorCopyWithImpl(ChangeQueryError _value, $Res Function(ChangeQueryError) _then)
+  _$ChangeQueryErrorCopyWithImpl(
+      ChangeQueryError _value, $Res Function(ChangeQueryError) _then)
       : super(_value, (v) => _then(v as ChangeQueryError));
 
   @override
@@ -1174,9 +1227,11 @@ class _$ChangeQueryError implements ChangeQueryError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is ChangeQueryError &&
-            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)) &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality().equals(other.stackTrace, stackTrace)));
+                const DeepCollectionEquality()
+                    .equals(other.stackTrace, stackTrace)));
   }
 
   @override
@@ -1240,12 +1295,14 @@ class _$ChangeQueryError implements ChangeQueryError {
 }
 
 abstract class ChangeQueryError implements ChangeQuery, ErrorAction {
-  const factory ChangeQueryError(Object error, StackTrace stackTrace) = _$ChangeQueryError;
+  const factory ChangeQueryError(Object error, StackTrace stackTrace) =
+      _$ChangeQueryError;
 
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ChangeQueryErrorCopyWith<ChangeQueryError> get copyWith => throw _privateConstructorUsedError;
+  $ChangeQueryErrorCopyWith<ChangeQueryError> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1309,12 +1366,14 @@ mixin _$InitializeApp {
 
 /// @nodoc
 abstract class $InitializeAppCopyWith<$Res> {
-  factory $InitializeAppCopyWith(InitializeApp value, $Res Function(InitializeApp) then) =
+  factory $InitializeAppCopyWith(
+          InitializeApp value, $Res Function(InitializeApp) then) =
       _$InitializeAppCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InitializeAppCopyWithImpl<$Res> implements $InitializeAppCopyWith<$Res> {
+class _$InitializeAppCopyWithImpl<$Res>
+    implements $InitializeAppCopyWith<$Res> {
   _$InitializeAppCopyWithImpl(this._value, this._then);
 
   final InitializeApp _value;
@@ -1324,14 +1383,17 @@ class _$InitializeAppCopyWithImpl<$Res> implements $InitializeAppCopyWith<$Res> 
 
 /// @nodoc
 abstract class $InitializeAppStartCopyWith<$Res> {
-  factory $InitializeAppStartCopyWith(InitializeAppStart value, $Res Function(InitializeAppStart) then) =
+  factory $InitializeAppStartCopyWith(
+          InitializeAppStart value, $Res Function(InitializeAppStart) then) =
       _$InitializeAppStartCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InitializeAppStartCopyWithImpl<$Res> extends _$InitializeAppCopyWithImpl<$Res>
+class _$InitializeAppStartCopyWithImpl<$Res>
+    extends _$InitializeAppCopyWithImpl<$Res>
     implements $InitializeAppStartCopyWith<$Res> {
-  _$InitializeAppStartCopyWithImpl(InitializeAppStart _value, $Res Function(InitializeAppStart) _then)
+  _$InitializeAppStartCopyWithImpl(
+      InitializeAppStart _value, $Res Function(InitializeAppStart) _then)
       : super(_value, (v) => _then(v as InitializeAppStart));
 
   @override
@@ -1411,15 +1473,18 @@ abstract class InitializeAppStart implements InitializeApp {
 
 /// @nodoc
 abstract class $InitializeAppSuccessfulCopyWith<$Res> {
-  factory $InitializeAppSuccessfulCopyWith(InitializeAppSuccessful value, $Res Function(InitializeAppSuccessful) then) =
+  factory $InitializeAppSuccessfulCopyWith(InitializeAppSuccessful value,
+          $Res Function(InitializeAppSuccessful) then) =
       _$InitializeAppSuccessfulCopyWithImpl<$Res>;
   $Res call({AppUser? user});
 }
 
 /// @nodoc
-class _$InitializeAppSuccessfulCopyWithImpl<$Res> extends _$InitializeAppCopyWithImpl<$Res>
+class _$InitializeAppSuccessfulCopyWithImpl<$Res>
+    extends _$InitializeAppCopyWithImpl<$Res>
     implements $InitializeAppSuccessfulCopyWith<$Res> {
-  _$InitializeAppSuccessfulCopyWithImpl(InitializeAppSuccessful _value, $Res Function(InitializeAppSuccessful) _then)
+  _$InitializeAppSuccessfulCopyWithImpl(InitializeAppSuccessful _value,
+      $Res Function(InitializeAppSuccessful) _then)
       : super(_value, (v) => _then(v as InitializeAppSuccessful));
 
   @override
@@ -1455,16 +1520,19 @@ class _$InitializeAppSuccessful implements InitializeAppSuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is InitializeAppSuccessful &&
-            (identical(other.user, user) || const DeepCollectionEquality().equals(other.user, user)));
+            (identical(other.user, user) ||
+                const DeepCollectionEquality().equals(other.user, user)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
 
   @JsonKey(ignore: true)
   @override
   $InitializeAppSuccessfulCopyWith<InitializeAppSuccessful> get copyWith =>
-      _$InitializeAppSuccessfulCopyWithImpl<InitializeAppSuccessful>(this, _$identity);
+      _$InitializeAppSuccessfulCopyWithImpl<InitializeAppSuccessful>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1516,24 +1584,29 @@ class _$InitializeAppSuccessful implements InitializeAppSuccessful {
 }
 
 abstract class InitializeAppSuccessful implements InitializeApp {
-  const factory InitializeAppSuccessful(AppUser? user) = _$InitializeAppSuccessful;
+  const factory InitializeAppSuccessful(AppUser? user) =
+      _$InitializeAppSuccessful;
 
   AppUser? get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $InitializeAppSuccessfulCopyWith<InitializeAppSuccessful> get copyWith => throw _privateConstructorUsedError;
+  $InitializeAppSuccessfulCopyWith<InitializeAppSuccessful> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $InitializeAppErrorCopyWith<$Res> {
-  factory $InitializeAppErrorCopyWith(InitializeAppError value, $Res Function(InitializeAppError) then) =
+  factory $InitializeAppErrorCopyWith(
+          InitializeAppError value, $Res Function(InitializeAppError) then) =
       _$InitializeAppErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$InitializeAppErrorCopyWithImpl<$Res> extends _$InitializeAppCopyWithImpl<$Res>
+class _$InitializeAppErrorCopyWithImpl<$Res>
+    extends _$InitializeAppCopyWithImpl<$Res>
     implements $InitializeAppErrorCopyWith<$Res> {
-  _$InitializeAppErrorCopyWithImpl(InitializeAppError _value, $Res Function(InitializeAppError) _then)
+  _$InitializeAppErrorCopyWithImpl(
+      InitializeAppError _value, $Res Function(InitializeAppError) _then)
       : super(_value, (v) => _then(v as InitializeAppError));
 
   @override
@@ -1577,9 +1650,11 @@ class _$InitializeAppError implements InitializeAppError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is InitializeAppError &&
-            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)) &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality().equals(other.stackTrace, stackTrace)));
+                const DeepCollectionEquality()
+                    .equals(other.stackTrace, stackTrace)));
   }
 
   @override
@@ -1643,19 +1718,22 @@ class _$InitializeAppError implements InitializeAppError {
 }
 
 abstract class InitializeAppError implements InitializeApp, ErrorAction {
-  const factory InitializeAppError(Object error, StackTrace stackTrace) = _$InitializeAppError;
+  const factory InitializeAppError(Object error, StackTrace stackTrace) =
+      _$InitializeAppError;
 
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $InitializeAppErrorCopyWith<InitializeAppError> get copyWith => throw _privateConstructorUsedError;
+  $InitializeAppErrorCopyWith<InitializeAppError> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 class _$RegisterTearOff {
   const _$RegisterTearOff();
 
-  RegisterStart call(String email, String password, void Function(AppAction) result) {
+  RegisterStart call(
+      String email, String password, void Function(AppAction) result) {
     return RegisterStart(
       email,
       password,
@@ -1684,14 +1762,18 @@ const $Register = _$RegisterTearOff();
 mixin _$Register {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String email, String password, void Function(AppAction) result) $default, {
+    TResult Function(
+            String email, String password, void Function(AppAction) result)
+        $default, {
     required TResult Function(AppUser user) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String email, String password, void Function(AppAction) result)? $default, {
+    TResult Function(
+            String email, String password, void Function(AppAction) result)?
+        $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -1716,7 +1798,8 @@ mixin _$Register {
 
 /// @nodoc
 abstract class $RegisterCopyWith<$Res> {
-  factory $RegisterCopyWith(Register value, $Res Function(Register) then) = _$RegisterCopyWithImpl<$Res>;
+  factory $RegisterCopyWith(Register value, $Res Function(Register) then) =
+      _$RegisterCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -1730,14 +1813,17 @@ class _$RegisterCopyWithImpl<$Res> implements $RegisterCopyWith<$Res> {
 
 /// @nodoc
 abstract class $RegisterStartCopyWith<$Res> {
-  factory $RegisterStartCopyWith(RegisterStart value, $Res Function(RegisterStart) then) =
+  factory $RegisterStartCopyWith(
+          RegisterStart value, $Res Function(RegisterStart) then) =
       _$RegisterStartCopyWithImpl<$Res>;
   $Res call({String email, String password, void Function(AppAction) result});
 }
 
 /// @nodoc
-class _$RegisterStartCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res> implements $RegisterStartCopyWith<$Res> {
-  _$RegisterStartCopyWithImpl(RegisterStart _value, $Res Function(RegisterStart) _then)
+class _$RegisterStartCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
+    implements $RegisterStartCopyWith<$Res> {
+  _$RegisterStartCopyWithImpl(
+      RegisterStart _value, $Res Function(RegisterStart) _then)
       : super(_value, (v) => _then(v as RegisterStart));
 
   @override
@@ -1787,9 +1873,13 @@ class _$RegisterStart implements RegisterStart {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is RegisterStart &&
-            (identical(other.email, email) || const DeepCollectionEquality().equals(other.email, email)) &&
-            (identical(other.password, password) || const DeepCollectionEquality().equals(other.password, password)) &&
-            (identical(other.result, result) || const DeepCollectionEquality().equals(other.result, result)));
+            (identical(other.email, email) ||
+                const DeepCollectionEquality().equals(other.email, email)) &&
+            (identical(other.password, password) ||
+                const DeepCollectionEquality()
+                    .equals(other.password, password)) &&
+            (identical(other.result, result) ||
+                const DeepCollectionEquality().equals(other.result, result)));
   }
 
   @override
@@ -1801,12 +1891,15 @@ class _$RegisterStart implements RegisterStart {
 
   @JsonKey(ignore: true)
   @override
-  $RegisterStartCopyWith<RegisterStart> get copyWith => _$RegisterStartCopyWithImpl<RegisterStart>(this, _$identity);
+  $RegisterStartCopyWith<RegisterStart> get copyWith =>
+      _$RegisterStartCopyWithImpl<RegisterStart>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String email, String password, void Function(AppAction) result) $default, {
+    TResult Function(
+            String email, String password, void Function(AppAction) result)
+        $default, {
     required TResult Function(AppUser user) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -1816,7 +1909,9 @@ class _$RegisterStart implements RegisterStart {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String email, String password, void Function(AppAction) result)? $default, {
+    TResult Function(
+            String email, String password, void Function(AppAction) result)?
+        $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -1853,26 +1948,32 @@ class _$RegisterStart implements RegisterStart {
 }
 
 abstract class RegisterStart implements Register {
-  const factory RegisterStart(String email, String password, void Function(AppAction) result) = _$RegisterStart;
+  const factory RegisterStart(
+          String email, String password, void Function(AppAction) result) =
+      _$RegisterStart;
 
   String get email => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
   void Function(AppAction) get result => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RegisterStartCopyWith<RegisterStart> get copyWith => throw _privateConstructorUsedError;
+  $RegisterStartCopyWith<RegisterStart> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RegisterSuccessfulCopyWith<$Res> {
-  factory $RegisterSuccessfulCopyWith(RegisterSuccessful value, $Res Function(RegisterSuccessful) then) =
+  factory $RegisterSuccessfulCopyWith(
+          RegisterSuccessful value, $Res Function(RegisterSuccessful) then) =
       _$RegisterSuccessfulCopyWithImpl<$Res>;
   $Res call({AppUser user});
 }
 
 /// @nodoc
-class _$RegisterSuccessfulCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
+class _$RegisterSuccessfulCopyWithImpl<$Res>
+    extends _$RegisterCopyWithImpl<$Res>
     implements $RegisterSuccessfulCopyWith<$Res> {
-  _$RegisterSuccessfulCopyWithImpl(RegisterSuccessful _value, $Res Function(RegisterSuccessful) _then)
+  _$RegisterSuccessfulCopyWithImpl(
+      RegisterSuccessful _value, $Res Function(RegisterSuccessful) _then)
       : super(_value, (v) => _then(v as RegisterSuccessful));
 
   @override
@@ -1908,11 +2009,13 @@ class _$RegisterSuccessful implements RegisterSuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is RegisterSuccessful &&
-            (identical(other.user, user) || const DeepCollectionEquality().equals(other.user, user)));
+            (identical(other.user, user) ||
+                const DeepCollectionEquality().equals(other.user, user)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
 
   @JsonKey(ignore: true)
   @override
@@ -1922,7 +2025,9 @@ class _$RegisterSuccessful implements RegisterSuccessful {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String email, String password, void Function(AppAction) result) $default, {
+    TResult Function(
+            String email, String password, void Function(AppAction) result)
+        $default, {
     required TResult Function(AppUser user) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -1932,7 +2037,9 @@ class _$RegisterSuccessful implements RegisterSuccessful {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String email, String password, void Function(AppAction) result)? $default, {
+    TResult Function(
+            String email, String password, void Function(AppAction) result)?
+        $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -1973,19 +2080,23 @@ abstract class RegisterSuccessful implements Register {
 
   AppUser get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RegisterSuccessfulCopyWith<RegisterSuccessful> get copyWith => throw _privateConstructorUsedError;
+  $RegisterSuccessfulCopyWith<RegisterSuccessful> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RegisterErrorCopyWith<$Res> {
-  factory $RegisterErrorCopyWith(RegisterError value, $Res Function(RegisterError) then) =
+  factory $RegisterErrorCopyWith(
+          RegisterError value, $Res Function(RegisterError) then) =
       _$RegisterErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$RegisterErrorCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res> implements $RegisterErrorCopyWith<$Res> {
-  _$RegisterErrorCopyWithImpl(RegisterError _value, $Res Function(RegisterError) _then)
+class _$RegisterErrorCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
+    implements $RegisterErrorCopyWith<$Res> {
+  _$RegisterErrorCopyWithImpl(
+      RegisterError _value, $Res Function(RegisterError) _then)
       : super(_value, (v) => _then(v as RegisterError));
 
   @override
@@ -2029,9 +2140,11 @@ class _$RegisterError implements RegisterError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is RegisterError &&
-            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)) &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality().equals(other.stackTrace, stackTrace)));
+                const DeepCollectionEquality()
+                    .equals(other.stackTrace, stackTrace)));
   }
 
   @override
@@ -2042,12 +2155,15 @@ class _$RegisterError implements RegisterError {
 
   @JsonKey(ignore: true)
   @override
-  $RegisterErrorCopyWith<RegisterError> get copyWith => _$RegisterErrorCopyWithImpl<RegisterError>(this, _$identity);
+  $RegisterErrorCopyWith<RegisterError> get copyWith =>
+      _$RegisterErrorCopyWithImpl<RegisterError>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String email, String password, void Function(AppAction) result) $default, {
+    TResult Function(
+            String email, String password, void Function(AppAction) result)
+        $default, {
     required TResult Function(AppUser user) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -2057,7 +2173,9 @@ class _$RegisterError implements RegisterError {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String email, String password, void Function(AppAction) result)? $default, {
+    TResult Function(
+            String email, String password, void Function(AppAction) result)?
+        $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -2094,12 +2212,14 @@ class _$RegisterError implements RegisterError {
 }
 
 abstract class RegisterError implements Register, ErrorAction {
-  const factory RegisterError(Object error, StackTrace stackTrace) = _$RegisterError;
+  const factory RegisterError(Object error, StackTrace stackTrace) =
+      _$RegisterError;
 
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RegisterErrorCopyWith<RegisterError> get copyWith => throw _privateConstructorUsedError;
+  $RegisterErrorCopyWith<RegisterError> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2161,7 +2281,8 @@ mixin _$SignOut {
 
 /// @nodoc
 abstract class $SignOutCopyWith<$Res> {
-  factory $SignOutCopyWith(SignOut value, $Res Function(SignOut) then) = _$SignOutCopyWithImpl<$Res>;
+  factory $SignOutCopyWith(SignOut value, $Res Function(SignOut) then) =
+      _$SignOutCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -2175,13 +2296,16 @@ class _$SignOutCopyWithImpl<$Res> implements $SignOutCopyWith<$Res> {
 
 /// @nodoc
 abstract class $SignOutStartCopyWith<$Res> {
-  factory $SignOutStartCopyWith(SignOutStart value, $Res Function(SignOutStart) then) =
+  factory $SignOutStartCopyWith(
+          SignOutStart value, $Res Function(SignOutStart) then) =
       _$SignOutStartCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SignOutStartCopyWithImpl<$Res> extends _$SignOutCopyWithImpl<$Res> implements $SignOutStartCopyWith<$Res> {
-  _$SignOutStartCopyWithImpl(SignOutStart _value, $Res Function(SignOutStart) _then)
+class _$SignOutStartCopyWithImpl<$Res> extends _$SignOutCopyWithImpl<$Res>
+    implements $SignOutStartCopyWith<$Res> {
+  _$SignOutStartCopyWithImpl(
+      SignOutStart _value, $Res Function(SignOutStart) _then)
       : super(_value, (v) => _then(v as SignOutStart));
 
   @override
@@ -2261,14 +2385,16 @@ abstract class SignOutStart implements SignOut {
 
 /// @nodoc
 abstract class $SignOutSuccessfulCopyWith<$Res> {
-  factory $SignOutSuccessfulCopyWith(SignOutSuccessful value, $Res Function(SignOutSuccessful) then) =
+  factory $SignOutSuccessfulCopyWith(
+          SignOutSuccessful value, $Res Function(SignOutSuccessful) then) =
       _$SignOutSuccessfulCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class _$SignOutSuccessfulCopyWithImpl<$Res> extends _$SignOutCopyWithImpl<$Res>
     implements $SignOutSuccessfulCopyWith<$Res> {
-  _$SignOutSuccessfulCopyWithImpl(SignOutSuccessful _value, $Res Function(SignOutSuccessful) _then)
+  _$SignOutSuccessfulCopyWithImpl(
+      SignOutSuccessful _value, $Res Function(SignOutSuccessful) _then)
       : super(_value, (v) => _then(v as SignOutSuccessful));
 
   @override
@@ -2348,14 +2474,17 @@ abstract class SignOutSuccessful implements SignOut {
 
 /// @nodoc
 abstract class $SignOutErrorCopyWith<$Res> {
-  factory $SignOutErrorCopyWith(SignOutError value, $Res Function(SignOutError) then) =
+  factory $SignOutErrorCopyWith(
+          SignOutError value, $Res Function(SignOutError) then) =
       _$SignOutErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$SignOutErrorCopyWithImpl<$Res> extends _$SignOutCopyWithImpl<$Res> implements $SignOutErrorCopyWith<$Res> {
-  _$SignOutErrorCopyWithImpl(SignOutError _value, $Res Function(SignOutError) _then)
+class _$SignOutErrorCopyWithImpl<$Res> extends _$SignOutCopyWithImpl<$Res>
+    implements $SignOutErrorCopyWith<$Res> {
+  _$SignOutErrorCopyWithImpl(
+      SignOutError _value, $Res Function(SignOutError) _then)
       : super(_value, (v) => _then(v as SignOutError));
 
   @override
@@ -2399,9 +2528,11 @@ class _$SignOutError implements SignOutError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is SignOutError &&
-            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)) &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality().equals(other.stackTrace, stackTrace)));
+                const DeepCollectionEquality()
+                    .equals(other.stackTrace, stackTrace)));
   }
 
   @override
@@ -2412,7 +2543,8 @@ class _$SignOutError implements SignOutError {
 
   @JsonKey(ignore: true)
   @override
-  $SignOutErrorCopyWith<SignOutError> get copyWith => _$SignOutErrorCopyWithImpl<SignOutError>(this, _$identity);
+  $SignOutErrorCopyWith<SignOutError> get copyWith =>
+      _$SignOutErrorCopyWithImpl<SignOutError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2464,10 +2596,433 @@ class _$SignOutError implements SignOutError {
 }
 
 abstract class SignOutError implements SignOut, ErrorAction {
-  const factory SignOutError(Object error, StackTrace stackTrace) = _$SignOutError;
+  const factory SignOutError(Object error, StackTrace stackTrace) =
+      _$SignOutError;
 
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SignOutErrorCopyWith<SignOutError> get copyWith => throw _privateConstructorUsedError;
+  $SignOutErrorCopyWith<SignOutError> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+class _$UploadPhotoTearOff {
+  const _$UploadPhotoTearOff();
+
+  UploadPhotoStart call(String filePath) {
+    return UploadPhotoStart(
+      filePath,
+    );
+  }
+
+  UploadPhotoSuccessful successful() {
+    return const UploadPhotoSuccessful();
+  }
+
+  UploadPhotoError error(Object error, StackTrace stackTrace) {
+    return UploadPhotoError(
+      error,
+      stackTrace,
+    );
+  }
+}
+
+/// @nodoc
+const $UploadPhoto = _$UploadPhotoTearOff();
+
+/// @nodoc
+mixin _$UploadPhoto {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String filePath) $default, {
+    required TResult Function() successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String filePath)? $default, {
+    TResult Function()? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(UploadPhotoStart value) $default, {
+    required TResult Function(UploadPhotoSuccessful value) successful,
+    required TResult Function(UploadPhotoError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(UploadPhotoStart value)? $default, {
+    TResult Function(UploadPhotoSuccessful value)? successful,
+    TResult Function(UploadPhotoError value)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UploadPhotoCopyWith<$Res> {
+  factory $UploadPhotoCopyWith(
+          UploadPhoto value, $Res Function(UploadPhoto) then) =
+      _$UploadPhotoCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$UploadPhotoCopyWithImpl<$Res> implements $UploadPhotoCopyWith<$Res> {
+  _$UploadPhotoCopyWithImpl(this._value, this._then);
+
+  final UploadPhoto _value;
+  // ignore: unused_field
+  final $Res Function(UploadPhoto) _then;
+}
+
+/// @nodoc
+abstract class $UploadPhotoStartCopyWith<$Res> {
+  factory $UploadPhotoStartCopyWith(
+          UploadPhotoStart value, $Res Function(UploadPhotoStart) then) =
+      _$UploadPhotoStartCopyWithImpl<$Res>;
+  $Res call({String filePath});
+}
+
+/// @nodoc
+class _$UploadPhotoStartCopyWithImpl<$Res>
+    extends _$UploadPhotoCopyWithImpl<$Res>
+    implements $UploadPhotoStartCopyWith<$Res> {
+  _$UploadPhotoStartCopyWithImpl(
+      UploadPhotoStart _value, $Res Function(UploadPhotoStart) _then)
+      : super(_value, (v) => _then(v as UploadPhotoStart));
+
+  @override
+  UploadPhotoStart get _value => super._value as UploadPhotoStart;
+
+  @override
+  $Res call({
+    Object? filePath = freezed,
+  }) {
+    return _then(UploadPhotoStart(
+      filePath == freezed
+          ? _value.filePath
+          : filePath // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UploadPhotoStart implements UploadPhotoStart {
+  const _$UploadPhotoStart(this.filePath);
+
+  @override
+  final String filePath;
+
+  @override
+  String toString() {
+    return 'UploadPhoto(filePath: $filePath)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is UploadPhotoStart &&
+            (identical(other.filePath, filePath) ||
+                const DeepCollectionEquality()
+                    .equals(other.filePath, filePath)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(filePath);
+
+  @JsonKey(ignore: true)
+  @override
+  $UploadPhotoStartCopyWith<UploadPhotoStart> get copyWith =>
+      _$UploadPhotoStartCopyWithImpl<UploadPhotoStart>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String filePath) $default, {
+    required TResult Function() successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return $default(filePath);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String filePath)? $default, {
+    TResult Function()? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default(filePath);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(UploadPhotoStart value) $default, {
+    required TResult Function(UploadPhotoSuccessful value) successful,
+    required TResult Function(UploadPhotoError value) error,
+  }) {
+    return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(UploadPhotoStart value)? $default, {
+    TResult Function(UploadPhotoSuccessful value)? successful,
+    TResult Function(UploadPhotoError value)? error,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadPhotoStart implements UploadPhoto {
+  const factory UploadPhotoStart(String filePath) = _$UploadPhotoStart;
+
+  String get filePath => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UploadPhotoStartCopyWith<UploadPhotoStart> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UploadPhotoSuccessfulCopyWith<$Res> {
+  factory $UploadPhotoSuccessfulCopyWith(UploadPhotoSuccessful value,
+          $Res Function(UploadPhotoSuccessful) then) =
+      _$UploadPhotoSuccessfulCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$UploadPhotoSuccessfulCopyWithImpl<$Res>
+    extends _$UploadPhotoCopyWithImpl<$Res>
+    implements $UploadPhotoSuccessfulCopyWith<$Res> {
+  _$UploadPhotoSuccessfulCopyWithImpl(
+      UploadPhotoSuccessful _value, $Res Function(UploadPhotoSuccessful) _then)
+      : super(_value, (v) => _then(v as UploadPhotoSuccessful));
+
+  @override
+  UploadPhotoSuccessful get _value => super._value as UploadPhotoSuccessful;
+}
+
+/// @nodoc
+
+class _$UploadPhotoSuccessful implements UploadPhotoSuccessful {
+  const _$UploadPhotoSuccessful();
+
+  @override
+  String toString() {
+    return 'UploadPhoto.successful()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is UploadPhotoSuccessful);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String filePath) $default, {
+    required TResult Function() successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return successful();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String filePath)? $default, {
+    TResult Function()? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (successful != null) {
+      return successful();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(UploadPhotoStart value) $default, {
+    required TResult Function(UploadPhotoSuccessful value) successful,
+    required TResult Function(UploadPhotoError value) error,
+  }) {
+    return successful(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(UploadPhotoStart value)? $default, {
+    TResult Function(UploadPhotoSuccessful value)? successful,
+    TResult Function(UploadPhotoError value)? error,
+    required TResult orElse(),
+  }) {
+    if (successful != null) {
+      return successful(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadPhotoSuccessful implements UploadPhoto {
+  const factory UploadPhotoSuccessful() = _$UploadPhotoSuccessful;
+}
+
+/// @nodoc
+abstract class $UploadPhotoErrorCopyWith<$Res> {
+  factory $UploadPhotoErrorCopyWith(
+          UploadPhotoError value, $Res Function(UploadPhotoError) then) =
+      _$UploadPhotoErrorCopyWithImpl<$Res>;
+  $Res call({Object error, StackTrace stackTrace});
+}
+
+/// @nodoc
+class _$UploadPhotoErrorCopyWithImpl<$Res>
+    extends _$UploadPhotoCopyWithImpl<$Res>
+    implements $UploadPhotoErrorCopyWith<$Res> {
+  _$UploadPhotoErrorCopyWithImpl(
+      UploadPhotoError _value, $Res Function(UploadPhotoError) _then)
+      : super(_value, (v) => _then(v as UploadPhotoError));
+
+  @override
+  UploadPhotoError get _value => super._value as UploadPhotoError;
+
+  @override
+  $Res call({
+    Object? error = freezed,
+    Object? stackTrace = freezed,
+  }) {
+    return _then(UploadPhotoError(
+      error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as Object,
+      stackTrace == freezed
+          ? _value.stackTrace
+          : stackTrace // ignore: cast_nullable_to_non_nullable
+              as StackTrace,
+    ));
+  }
+}
+
+/// @nodoc
+
+@Implements(ErrorAction)
+class _$UploadPhotoError implements UploadPhotoError {
+  const _$UploadPhotoError(this.error, this.stackTrace);
+
+  @override
+  final Object error;
+  @override
+  final StackTrace stackTrace;
+
+  @override
+  String toString() {
+    return 'UploadPhoto.error(error: $error, stackTrace: $stackTrace)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is UploadPhotoError &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)) &&
+            (identical(other.stackTrace, stackTrace) ||
+                const DeepCollectionEquality()
+                    .equals(other.stackTrace, stackTrace)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(error) ^
+      const DeepCollectionEquality().hash(stackTrace);
+
+  @JsonKey(ignore: true)
+  @override
+  $UploadPhotoErrorCopyWith<UploadPhotoError> get copyWith =>
+      _$UploadPhotoErrorCopyWithImpl<UploadPhotoError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String filePath) $default, {
+    required TResult Function() successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return error(this.error, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String filePath)? $default, {
+    TResult Function()? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this.error, stackTrace);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(UploadPhotoStart value) $default, {
+    required TResult Function(UploadPhotoSuccessful value) successful,
+    required TResult Function(UploadPhotoError value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(UploadPhotoStart value)? $default, {
+    TResult Function(UploadPhotoSuccessful value)? successful,
+    TResult Function(UploadPhotoError value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadPhotoError implements UploadPhoto, ErrorAction {
+  const factory UploadPhotoError(Object error, StackTrace stackTrace) =
+      _$UploadPhotoError;
+
+  Object get error => throw _privateConstructorUsedError;
+  StackTrace get stackTrace => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UploadPhotoErrorCopyWith<UploadPhotoError> get copyWith =>
+      throw _privateConstructorUsedError;
 }

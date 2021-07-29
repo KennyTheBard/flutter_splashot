@@ -8,6 +8,7 @@ import 'package:flutter_splashot/epics/app_epic.dart';
 import 'package:flutter_splashot/models/index.dart';
 import 'package:flutter_splashot/presentation/home_page.dart';
 import 'package:flutter_splashot/presentation/login_page.dart';
+import 'package:flutter_splashot/presentation/profile_page.dart';
 import 'package:flutter_splashot/reducers/reducers.dart';
 import 'package:http/http.dart';
 import 'package:redux/redux.dart';
@@ -66,6 +67,7 @@ class Splashot extends StatelessWidget {
           home: const HomePage(title: 'Splashot'),
           routes: <String, WidgetBuilder>{
             '/login': (BuildContext context) => const LoginPage(),
+            '/profile': (BuildContext context) => const ProfilePage(),
           }),
     );
   }
