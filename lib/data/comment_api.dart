@@ -6,16 +6,16 @@ class CommentApi {
 
   final FirebaseFirestore _firestore;
 
-  Future<void> postComment(String userId, String imageId, String text) async {
+  Future<void> postComment(String authorId, String imageId, String text) async {
     final int ts = DateTime.now().toUtc().millisecondsSinceEpoch;
 
     await _firestore //
         .collection('comments')
-        .doc('$imageId-$userId-$ts')
+        .doc('$imageId-$authorId-$ts')
         .set(<String, Object>{
       'text': text,
       'imageId': imageId,
-      'userId': userId,
+      'authorId': authorId,
       'timestamp': ts,
     });
   }
@@ -27,14 +27,7 @@ class CommentApi {
         .docs
         .map((QueryDocumentSnapshot<Map<String, dynamic>> element) => element.data())
         .where((Map<String, dynamic> data) => data['imageId'] == imageId)
-        .map((Map<String, dynamic> data) {
-      return Comment((CommentBuilder b) {
-        b
-          ..imageId = data['imageId'] as String
-          ..text = data['text'] as String
-          ..authorId = data['userId'] as String
-          ..timestamp = data['timestamp'] as int;
-      });
-    }).toList();
+        .map((Map<String, dynamic> data) => Comment.fromJson(data))
+        .toList();
   }
 }

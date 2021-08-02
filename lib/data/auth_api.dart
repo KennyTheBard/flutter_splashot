@@ -90,16 +90,8 @@ class AuthApi {
             .collection('users')
             .get())
         .docs
-        .map((QueryDocumentSnapshot<Map<String, dynamic>> element) {
-          final Map<String, dynamic> data = element.data();
-          return AppUser((AppUserBuilder b) {
-            b
-              ..uid = data['uid'] as String
-              ..username = data['username'] as String
-              ..photoUrl = data['photoUrl'] as String
-              ..email = data['email'] as String;
-          });
-        })
+        .map((QueryDocumentSnapshot<Map<String, dynamic>> element) => element.data())
+        .map((Map<String, dynamic> data) => AppUser.fromJson(data))
         .where((AppUser user) => userIds.contains(user.uid))
         .toList();
   }
