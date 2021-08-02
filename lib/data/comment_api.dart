@@ -29,6 +29,6 @@ class CommentApi {
         .map((QueryDocumentSnapshot<Map<String, dynamic>> element) => element.data())
         .map((Map<String, dynamic> data) => Comment.fromJson(data))
         .toList()
-    ..sort((Comment a, Comment b) => b.timestamp.compareTo(a.timestamp));
+          ..sort((Comment a, Comment b) => b.timestamp.compareTo(a.timestamp));
   }
 }
