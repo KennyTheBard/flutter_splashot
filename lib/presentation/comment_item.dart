@@ -23,9 +23,8 @@ class CommentItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Image.network(
-            authorPhotoUrl,
-            width: 64,
+          CircleAvatar(
+            backgroundImage: NetworkImage(authorPhotoUrl),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 10.0),
