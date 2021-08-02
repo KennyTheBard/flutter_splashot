@@ -12,6 +12,9 @@ part 'initialize_app.dart';
 part 'register.dart';
 part 'sign_out.dart';
 part 'upload_photo.dart';
+part 'post_comment.dart';
+part 'get_comments.dart';
+part 'get_app_users.dart';
 
 abstract class AppAction {}
 

@@ -14,6 +14,9 @@ Reducer<AppState> reducer = combineReducers(<Reducer<AppState>>[
   TypedReducer<AppState, RegisterSuccessful>(_registerSuccessful),
   TypedReducer<AppState, InitializeAppSuccessful>(_initializeAppSuccessful),
   TypedReducer<AppState, SignOutSuccessful>(_signOutSuccessful),
+  TypedReducer<AppState, UploadPhotoSuccessful>(_uploadPhotoSuccessful),
+  TypedReducer<AppState, GetCommentsSuccessful>(_getCommentsSuccessful),
+  TypedReducer<AppState, GetAppUsersSuccessful>(_getAppUsersSuccessful),
 ]);
 
 AppState _getImagesSuccessful(AppState state, GetImagesSuccessful action) {
@@ -58,5 +61,23 @@ AppState _initializeAppSuccessful(AppState state, InitializeAppSuccessful action
 AppState _signOutSuccessful(AppState state, SignOutSuccessful action) {
   return state.rebuild((AppStateBuilder b) {
     b.user = null;
+  });
+}
+
+AppState _uploadPhotoSuccessful(AppState state, UploadPhotoSuccessful action) {
+  return state.rebuild((AppStateBuilder b) {
+    b.user = action.user.toBuilder();
+  });
+}
+
+AppState _getCommentsSuccessful(AppState state, GetCommentsSuccessful action) {
+  return state.rebuild((AppStateBuilder b) {
+    b.comments = action.comments.toBuiltList().toBuilder();
+  });
+}
+
+AppState _getAppUsersSuccessful(AppState state, GetAppUsersSuccessful action) {
+  return state.rebuild((AppStateBuilder b) {
+    b.commentAuthors = action.users.toBuiltList().toBuilder();
   });
 }

@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_splashot/presentation/details_page.dart';
 
 class ImageItem extends StatelessWidget {
   const ImageItem({
     Key? key,
+    required this.id,
     required this.imageUrl,
     required this.authorName,
     required this.likes,
   }) : super(key: key);
 
+  final String id;
   final String imageUrl;
   final String authorName;
   final int likes;
@@ -28,7 +31,16 @@ class ImageItem extends StatelessWidget {
           ),
           child: Column(
             children: <Widget>[
-              Image.network(imageUrl),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    DetailsPage.route,
+                    arguments: DetailsPageArguments(id),
+                  );
+                },
+                child: Image.network(imageUrl),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[

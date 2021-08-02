@@ -1,16 +1,20 @@
 import 'dart:io';
 
+import 'package:built_collection/built_collection.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter_splashot/models/index.dart';
 
 class AuthApi {
-  AuthApi({required FirebaseAuth auth, required FirebaseFirestore firestore})
+  AuthApi({required FirebaseAuth auth, required FirebaseFirestore firestore, required FirebaseStorage storage})
       : _auth = auth,
-        _firestore = firestore;
+        _firestore = firestore,
+        _storage = storage;
 
   final FirebaseAuth _auth;
   final FirebaseFirestore _firestore;
+  final FirebaseStorage _storage;
 
   Future<AppUser?> getCurrentUser() async {
     final User? user = _auth.currentUser;
@@ -58,17 +62,45 @@ class AuthApi {
     await _auth.signOut();
   }
 
-  // Future<AppUser> uploadPhoto(AppUser user, String filePath) async {
-  //   final File file = File(filePath);
-  //
-  //   await _firestore //
-  //       .doc('users/${user.uid}/profile.jpg')
-  //       .put(<String, Object>{file});
-  //
-  //   await _firestore //
-  //       .ref('users/${user.uid}/profile.jpg')
-  //   .get();
-  //
-  //   return user;
-  // }
+  Future<AppUser> uploadPhoto(AppUser user, String filePath) async {
+    final File file = File(filePath);
+    final String fileStoragePath = 'users/${user.uid}/profile.jpg';
+
+    await _storage //
+        .ref(fileStoragePath)
+        .putFile(file);
+
+    final String downloadUrl = await _storage //
+        .ref(fileStoragePath)
+        .getDownloadURL();
+
+    final AppUser newUser = user.rebuild((AppUserBuilder b) {
+      b.photoUrl = downloadUrl;
+    });
+
+    await _firestore //
+        .doc('users/${newUser.uid}')
+        .set(newUser.json);
+
+    return newUser;
+  }
+
+  Future<List<AppUser>> getUsersById(BuiltList<String> userIds) async {
+    return (await _firestore //
+            .collection('users')
+            .get())
+        .docs
+        .map((QueryDocumentSnapshot<Map<String, dynamic>> element) {
+          final Map<String, dynamic> data = element.data();
+          return AppUser((AppUserBuilder b) {
+            b
+              ..uid = data['uid'] as String
+              ..username = data['username'] as String
+              ..photoUrl = data['photoUrl'] as String
+              ..email = data['email'] as String;
+          });
+        })
+        .where((AppUser user) => userIds.contains(user.uid))
+        .toList();
+  }
 }

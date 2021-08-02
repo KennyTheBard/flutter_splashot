@@ -9,3 +9,4 @@ part 'index.g.dart';
 part 'app_state.dart';
 part 'unsplash_image.dart';
 part 'app_user.dart';
+part 'comment.dart';

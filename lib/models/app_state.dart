@@ -18,6 +18,10 @@ abstract class AppState implements Built<AppState, AppStateBuilder> {
 
   BuiltList<UnsplashImage> get images;
 
+  BuiltList<AppUser> get commentAuthors;
+
+  BuiltList<Comment> get comments;
+
   Map<String, dynamic> get json => serializers.serializeWith(serializer, this)! as Map<String, dynamic>;
 
   static Serializer<AppState> get serializer => _$appStateSerializer;

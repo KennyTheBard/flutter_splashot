@@ -9,6 +9,8 @@ import 'package:flutter_splashot/models/index.dart';
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
+  static const String route = '/profile';
+
   static const String PLACEHOLDER_URL =
       'https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png';
 
@@ -55,7 +57,9 @@ class _ProfilePageState extends State<ProfilePage> {
                           }
 
                           final String filePath = result.paths.first!;
-                          StoreProvider.of<AppState>(context).dispatch(UploadPhoto(filePath));
+                          StoreProvider.of<AppState>(context).dispatch(UploadPhoto(
+                            filePath,
+                          ));
                         },
                       ),
                     ],

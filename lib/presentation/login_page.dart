@@ -7,6 +7,8 @@ import 'package:flutter_splashot/models/index.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
+  static const String route = '/login';
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }

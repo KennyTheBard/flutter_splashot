@@ -13,6 +13,8 @@ class HomePage extends StatefulWidget {
       : _title = title,
         super(key: key);
 
+  static const String route = '/';
+
   final String _title;
 
   @override
@@ -127,6 +129,7 @@ class _HomePageState extends State<HomePage> {
               itemCount: images!.length,
               itemBuilder: (BuildContext context, int index) {
                 return ImageItem(
+                  id: images[index].id,
                   imageUrl: images[index].url,
                   authorName: images[index].author,
                   likes: images[index].likes,
